@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+    <link rel="stylesheet" href="form.css">
+</head>
+
+<body>
+    <div class="header">
+        <div class="container">
+            <div class="navbar">
+                <nav>
+                    <h1 class="hb">Registration Form</h1>
+                    <ul id="MenuItems">
+                        <li><a href="index.html">Back</a></li>
+
+                    </ul>
+                </nav>
+                <img src="images/cart.png" class="MenuItems" width="30px" height="30px">
+        <img src="images/menu.png" class="menu-icon" onclick="menutoggle()">
+     
+            </div>
+        </div>
+    </div>
+    <main>
+        <div class="register-form">
+            <h2>EVENT REGISTRATION FORM</h2>
+            <label for="Name-Event">Name
+                <input type="text" placeholder="Enter you name" >
+            </label>
+            <label for="department">Name of Department
+                <input type="text">
+            </label>
+            <label for="section">Section
+                <input type="text">
+            </label>
+            <label for="year of study">Year of study
+                <input type="text">
+            </label>
+            <label for="Event-time">E-Mail
+                <input type="email" min="09:00" max="18:00" >
+            </label>
+            <label for="Event-description">Mobile No.
+               <input type="phone">
+            </label>
+          
+            <button class="register-form-btn">Register</button>
+        </div>
+        <!-- <div class="register-form">
+            <h2>EVENT REGISTRATION FORM</h2>
+            <label for="Name-Event">Name Of The Event
+                <input type="text" placeholder="Enter you name" >
+            </label>
+            <label for="Event-date">Date Of The Event 
+                <input type="date" > 
+            </label>
+            <label for="Event-time">Time Of The Event 
+                <input type="time" min="09:00" max="18:00" >
+            </label>
+            <label for="Event-description">Event description 
+                <textarea name="description" id="Event-description" cols="30" rows="10"></textarea>
+            </label>
+          
+            <button class="register-form-btn">Create</button>
+        </div> -->
+    </main>
+    <script>
+        var MenuItems = document.getElementById("MenuItems");
+    
+        MenuItems.style.maxHeight = "0px";
+    
+        function menutoggle() {
+          if (MenuItems.style.maxHeight == "0px") {
+            MenuItems.style.maxHeight = "200px"
+          }
+          else {
+            MenuItems.style.maxHeight = "0px"
+          }
+        }
+      </script>
+</body>
+
+</html>
