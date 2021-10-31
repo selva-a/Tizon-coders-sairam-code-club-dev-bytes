@@ -1,0 +1,145 @@
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+body{
+	font-family: 'Poppins', sans-serif;
+}
+.navbar{
+	display: flex;
+	align-items: center;
+	padding: 12px;
+	background-color: #b8b8b8;
+}
+nav{
+	flex: 1;
+	text-align: right;
+}
+nav ul{
+	display: inline-block;
+	list-style-type: none;
+}
+nav ul li{
+	display: inline-block;
+	margin-right: 10px;
+}
+a{
+	text-decoration: none;
+	color: #555;
+	position: relative;
+	top: 25px;
+}
+.container{
+	max-width: 1300px;
+	margin: auto;
+	padding-left: 25px;
+	padding-right: 25px;
+}
+.hb{
+	position: relative;
+	right: 78.5vw;
+	font-weight: bold;
+}
+#MenuItems{
+	position: relative;
+	top:-6.3vh;
+	font-weight: bold;
+	font-size: 19px;
+}
+.MenuItems{
+	 position: relative;
+	 top: -0.2vh;
+}
+.hb{
+    font-style: arial;
+    font-weight: bolder;
+	margin-right: 0px;
+	position: relative;
+    top: 9px;
+}
+.menu-icon{
+	width: 28px;
+	margin-left: 20px;
+	display: none;
+}
+@media only screen and (max-width: 800px){
+	nav ul{
+		position: absolute;
+		top: 70px;
+		left: 0;
+		background: #333;
+		width: 100%;
+		overflow: hidden;
+		transition: max-height 0.5s;
+	}
+	nav ul li{
+		display: block;
+		margin-right: 50px;
+		margin-top: 10px;
+		margin-bottom: 10px;
+	}
+	nav ul li a{
+		color: #fff;
+	}
+	.menu-icon{
+		display: block;
+		cursor: pointer;
+	}
+}
+/* register form css*/
+
+.register-form, label, input{
+    padding: 15px;
+    width: 452px;
+    justify-content: center;
+    align-items: center;
+}
+
+.register-form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 1300px;
+    height: 600px;
+}
+.register-form-btn{
+	border-radius: 25px;
+	background-color: rgb(56, 114, 249);
+	color: white;
+	
+	border: none;
+	padding: 5px 15px 5px 15px;
+  }
+  #Event-description{
+	  width: 450px;
+	  height: 75px;
+  }
+
+  #display_image{
+      width: 800px;
+      height: 400px;
+      border: 2px solid black;
+  }
+  .container1{
+      display: flex;
+    width: 95vw;
+    height: 70vh;
+    margin: 1vh 3.71vw 1vh 3.71vw;
+ }
+  .project_img{
+      display: flex;
+      width: 60vw;
+      height: 70vh;
+  }
+  .project_img img{
+    width: 60vw;
+    height: 70vh;
+  }
+  .proj_desc {
+    display: flex;
+    width: 30vw;
+    padding: 5px;
+	font-style:arial;
+}

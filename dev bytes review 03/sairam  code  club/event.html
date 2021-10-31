@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+    <link rel="stylesheet" href="event.css">
+    <style>
+        *{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+body{
+	font-family: 'Poppins', sans-serif;
+}
+.navbar{
+	display: flex;
+	align-items: center;
+	padding: 12px;
+	background-color: #b8b8b8;
+}
+nav{
+	flex: 1;
+	text-align: right;
+}
+nav ul{
+	display: inline-block;
+	list-style-type: none;
+}
+nav ul li{
+	display: inline-block;
+	margin-right: 10px;
+}
+a{
+	text-decoration: none;
+	color: #555;
+	position: relative;
+	top: 25px;
+}
+.container{
+	max-width: 1300px;
+	margin: auto;
+	padding-left: 25px;
+	padding-right: 25px;
+}
+.hb{
+	font-style: arial;
+    font-weight: bolder;
+	position: relative;
+	right: 78.5vw;
+	font-weight: bold;
+}
+#MenuItems{
+	position: relative;
+	top:-6.3vh;
+	font-weight: bold;
+	font-size: 19px;
+}
+.MenuItems{
+	 position: relative;
+	 top: -0.2vh;
+}
+.hb{
+    margin-right: -88px;
+    	position: relative;
+    top: 9px;
+}
+.menu-icon{
+	width: 28px;
+	margin-left: 20px;
+	display: none;
+}
+@media only screen and (max-width: 800px){
+	nav ul{
+		position: absolute;
+		top: 70px;
+		left: 0;
+		background: #333;
+		width: 100%;
+		overflow: hidden;
+		transition: max-height 0.5s;
+	}
+	nav ul li{
+		display: block;
+		margin-right: 50px;
+		margin-top: 10px;
+		margin-bottom: 10px;
+	}
+	nav ul li a{
+		color: #fff;
+	}
+	.menu-icon{
+		display: block;
+		cursor: pointer;
+	}
+}
+/* register form css*/
+
+.register-form, label, input{
+    padding: 15px;
+    width: 452px;
+    /* justify-content: center; */
+    align-items: center;
+    
+}
+
+.register-form{
+    box-shadow: 1px 5px 17px black;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 900px;
+    height: 700px;
+    margin: 4vh 17vw 0vh 17vw;
+    }
+.register-form-btn{
+	border-radius: 25px;
+	background-color: rgb(56, 114, 249);
+	color: white;
+	padding: 5px 15px 5px 15px;
+	border: none;
+  }
+  #Event-description{
+    width: 450px;
+    height: 75px;
+}
+
+    </style>
+</head>
+
+<body>
+    <div class="header">
+        <div class="container">
+            <div class="navbar">
+                <nav>
+                    <h1 class="hb">Registration Form</h1>
+                    <ul id="MenuItems">
+                        <li><a href="index.php">Back</a></li>
+
+                    </ul>
+                </nav>
+                <img src="images/cart.png" class="MenuItems" width="30px" height="30px">
+                <img src="images/menu.png" class="menu-icon" onclick="menutoggle()">
+
+            </div>
+        </div>
+    </div>
+    <main>
+
+        <div class="register-form">
+            <h2>EVENT REGISTRATION FORM</h2>
+            <label for="Event-name">Name Of The Event:
+                <input type="text" placeholder="Enter you name" id="Event-name">
+            </label>
+            <label for="Event-date">Date Of The Event:
+                <input type="date"  id="Event-date">
+            </label>
+            <label for="Event-time">Time Of The Event:
+                <input type="time" min="06:00" max="22:00"  id="Event-time">
+            </label>
+            <label for="Event-description">Event description:
+                <textarea name="description" id="Event-description" cols="30" rows="10"></textarea>
+            </label>
+            <label for="poster">Choose a profile picture:
+
+            <input type="file" id="poster" name="poster" accept="image/png, image/jpeg">
+        </label>
+
+            <button class="register-form-btn " id="create-btn">Create</button>
+        </div>
+    </main>
+    <script>
+        var MenuItems = document.getElementById("MenuItems");
+
+        MenuItems.style.maxHeight = "0px";
+
+        function menutoggle() {
+            if (MenuItems.style.maxHeight == "0px") {
+                MenuItems.style.maxHeight = "200px"
+            }
+            else {
+                MenuItems.style.maxHeight = "0px"
+            }
+        }
+    </script>
+    <script>
+        create = document.getElementById("create-btn");
+        create.addEventListener("click", ()=>{
+            console.log("updating...");
+            Name = document.getElementById("Event-name").value;
+            date = document.getElementById("Event-date").value;
+            // time = document.getElementById("Event-time").value;
+            description = document.getElementById("Event-description").value;
+            poster = document.getElementById("poster").value;
+             if(localStorage.getItem('itemsJson') == null)
+             {
+                 itemJsonArray = [];
+                 itemJsonArray.push([Name,description]);
+                 localStorage.setItem('itemsJson');
+             }
+        })
+    </script>
+</body>
+
+</html>
